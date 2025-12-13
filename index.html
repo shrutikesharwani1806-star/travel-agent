@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <nav class="bg-blue-500 w-full py-[2vh] px-[3vw] flex items-center justify-between shadow-md">
+        <h1 class="text-white font-bold text-[5vw] sm:text-[3vw] md:text-[1.5vw] cursor-pointer">Travel Agent</h1>
+        <ul class="hidden md:flex">
+            <li class="text-white hover:text-gray-200 cursor-pointer px-[1.5vw] shadow-md">Destinations</li>
+            <li class="text-white hover:text-gray-200 cursor-pointer px-[1.5vw] shadow-md">About</li>
+            <li class="text-white hover:text-gray-200 cursor-pointer px-[1.5vw] shadow-md">Explore More</li>
+        </ul>
+        <button class="hidden sm:inline-block bg-black px-[1.5vw] py-[1.5vh] text-white font-semibold  shadow-lg rounded-lg hover:bg-gray-700 cursor-pointer">Plan Your Trip</button>
+    </nav>
+
+    <div class="page1 w-full h-[90vh] bg-blue-200 py-[1.5vh] px-[2vw] flex flex-col justify-center items-center">
+
+        <h1 class="text-black font-bold md:text-[3.2vw] sm:text-[6vw] text-[8vw] px-[1vh] mt-[1.5vh] cursor-pointer">Discover Your</h1>
+        <h1 class="text-black font-bold md:text-[3.2vw] sm:text-[6vw] text-[8vw] py-[1vh] mb-[1.5vh] cursor-pointer">Dream Destination</h1>
+        <p class="mx-[1vh] px-[2vh] py-[1vw] my-[2vh] md:my-[0vh] font-semibold text-gray-600 text-[3vw] sm:text-[3vw] md:text-[1.2vw]">Let AI find the perfect places to visit based on your city and budget. Personalized travel recommendations in seconds.</p>
+
+        <div class="buttonn flex md:flex-row sm:fle.5x-row flex-col">
+
+            <button class="bg-yellow-400 hover:bg-yellow-500 cursor-pointer font-semibold text-black rounder-lg px-3 py-3 mx-4 md:my-5 sm:my:5 my-1.5">Start planning with AI</button>
+            <button class="bg-gray-200 hover:bg-gray-300 cursor-pointer font-semibold text-black rounded-lg px-3 py-3 mx-4 md:my-5 sm:my:5 my-1.5">Explore Destinations</button>
+        </div>
+        <h1 class="text-black font-bold md:text-[3vw] text-[5vw] px-1 py-2 mt-3 cursor-pointer">Find Your Perfect Destination</h1>
+
+    </div>
+
+    <div class="page2 w-full px-[10vh] py-[3vw] bg-white flex flex-col items-center justify-center">
+
+        <h1 class="font-bold md:text-3xl text-[5vw] mx-4 mt-[2vh] text-black cursor-pointer">Generate Your Plan</h1>
+        <form class="inputs w-[80vw] h-[50vh] border border-[3px] border-green-200 hover:border-green-300 px-[3vh] py-[3vw] my-[5vh] flex flex-col items-center justify-center">
+            <input id="city" type="text" class="w-[60vw] px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5" placeholder="Enter City Name">
+            <input id="days" type="text" class="w-[60vw] px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5" placeholder="Number Of Days">
+            <input id="budget" type="text" class="w-[60vw] px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5" placeholder="budget">
+            <button id="generatePlan" class="bg-green-500 hover:bg-green-600 cursor-pointer px-[1vh] py-[1vw] text-white font-semibold my-2 mx-3 w-[60vw]">Get The Plan</button>
+        </form>
+        <div id="box" class="border border-gray-400 px-[3vw] py-[4vh] w-[80vw] mb-[4vh]">
+            <p id="generator" class="text-gray-600 font-semibold"></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
