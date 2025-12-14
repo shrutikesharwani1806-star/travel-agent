@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Agent</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
 
-    <nav class="bg-blue-500 w-full py-[2vh] px-[3vw] flex items-center justify-between shadow-md">
-        <h1 class="text-white font-bold text-[5vw] sm:text-[3vw] md:text-[1.5vw] cursor-pointer">Travel Agent</h1>
-        <ul class="hidden md:flex">
-            <li class="text-white hover:text-gray-200 cursor-pointer px-[1.5vw] shadow-md">Destinations</li>
-            <li class="text-white hover:text-gray-200 cursor-pointer px-[1.5vw] shadow-md">About</li>
-            <li class="text-white hover:text-gray-200 cursor-pointer px-[1.5vw] shadow-md">Explore More</li>
-        </ul>
-        <button class="hidden sm:inline-block bg-black px-[1.5vw] py-[1.5vh] text-white font-semibold  shadow-lg rounded-lg hover:bg-gray-700 cursor-pointer">Plan Your Trip</button>
-    </nav>
+    <div class="relative min-h-screen w-full max-w-full bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('./images/hero-travel.jpg');">
+        <div class="absolute inset-0 bg-gray-700/50 z-0"></div>
+        <nav class="z-10 relative bg-transparent backdrop-blur-md w-full py-[2vh] px-[3vw] flex items-center shadow-md">
+            <h1 class="text-white z-3 font-bold text-[5vw] justify-start text-shadow-lg sm:text-[2.3vw] md:text-[1.5vw] cursor-pointer">Travel Agent</h1>
+            <ul class="hidden z-3 md:flex absolute right-[20vw]">
+                <li class="z-3 text-white hover:text-gray-200 hover:scale-x-105 cursor-pointer px-[1.5vw] text-shadow-lg" style="transition: all ease-in-out;"><i class="fa-solid fa-plane" style="margin-right:6px;"></i> Flights</li>
+                <li class="z-3 text-white hover:text-gray-200 hover:scale-x-105 cursor-pointer px-[1.5vw] text-shadow-lg" style="transition: all ease-in-out;"><i class="fa-solid fa-car-rear" style="margin-right:6px;"></i> Cars</li>
+                <li class="z-3 text-white hover:text-gray-200 hover:scale-x-105 cursor-pointer px-[1.5vw] text-shadow-lg" style="transition: all ease-in-out;"><i class="fa-solid fa-map-location-dot" style="margin-right:6px;"></i> Map</li>
+                <li class="z-3 text-white hover:text-gray-200 hover:scale-x-105 cursor-pointer px-[1.5vw] text-shadow-lg" style="transition: all ease-in-out;"><i class="fa-solid fa-angles-right" style="margin-right:6px;"></i> More</li>
+            </ul>
+            <button class="z-3 hidden absolute right-[3vw] sm:inline-block hover:text-gray-200 px-[1.5vw] py-[1.5vh] text-white font-semibold  text-shadow-lg cursor-pointer hover:scale-x-105">Plan Your Trip</button>
+        </nav>
 
-    <div class="page1 w-full h-[90vh] bg-blue-200 py-[1.5vh] px-[2vw] flex flex-col justify-center items-center">
+        <div class="page1 relative z-10 w-full h-[90vh] py-[1.5vh] px-[2vw] flex flex-col justify-center items-center">
 
-        <h1 class="text-black font-bold md:text-[3.2vw] sm:text-[6vw] text-[8vw] px-[1vh] mt-[1.5vh] cursor-pointer">Discover Your</h1>
-        <h1 class="text-black font-bold md:text-[3.2vw] sm:text-[6vw] text-[8vw] py-[1vh] mb-[1.5vh] cursor-pointer">Dream Destination</h1>
-        <p class="mx-[1vh] px-[2vh] py-[1vw] my-[2vh] md:my-[0vh] font-semibold text-gray-600 text-[3vw] sm:text-[3vw] md:text-[1.2vw]">Let AI find the perfect places to visit based on your city and budget. Personalized travel recommendations in seconds.</p>
+            <h1 class="text-white z-3 font-bold md:text-[3.2vw] sm:text-[6vw] text-[8vw] px-[1vh] mt-[1.5vh] cursor-pointer text-shadow-lg">Discover Your</h1>
+            <h1 class="text-yellow-300 z-3 font-bold md:text-[3.2vw] sm:text-[6vw] text-[8vw] px-[1vh] mb-[1.5vh] cursor-pointer text-shadow-lg">Dream Destination</h1>
+            <p id="heroText1" class="mx-[1vh] z-3 px-[2vh] py-[1vw] my-[2vh] md:my-[0vh] font-semibold text-slate-100 text-[3vw] sm:text-[2.1vw] md:text-[1.2vw] text-shadow-lg"></p>
 
-        <div class="buttonn flex md:flex-row sm:fle.5x-row flex-col">
+            <div class="buttonn z-3 flex md:flex-row sm:fle.5x-row flex-col">
 
-            <button class="bg-yellow-400 hover:bg-yellow-500 cursor-pointer font-semibold text-black rounder-lg px-3 py-3 mx-4 md:my-5 sm:my:5 my-1.5">Start planning with AI</button>
-            <button class="bg-gray-200 hover:bg-gray-300 cursor-pointer font-semibold text-black rounded-lg px-3 py-3 mx-4 md:my-5 sm:my:5 my-1.5">Explore Destinations</button>
+                <button class="z-3 bg-gray-200 hover:bg-gray-300 hover:scale-x-105 cursor-pointer font-semibold text-black rounded-lg px-3 py-3 mx-4 md:my-5 sm:my:5 my-1.5 text-shadow-lg" style="transition: all ease-in-out;">Start planning with AI</button>
+                <button class="z-3 bg-gray-200 hover:bg-gray-300 hover:scale-x-105 cursor-pointer font-semibold text-black rounded-lg px-3 py-3 mx-4 md:my-5 sm:my:5 my-1.5 text-shadow-lg" style="transition: all ease-in-out;">Explore Destinations</button>
+            </div>
+            <h1 class="z-3 text-white font-bold md:text-[3vw] text-[5vw] px-1 py-2 mt-3 cursor-pointer text-shadow-lg">Find Your Perfect Destination</h1>
+
         </div>
-        <h1 class="text-black font-bold md:text-[3vw] text-[5vw] px-1 py-2 mt-3 cursor-pointer">Find Your Perfect Destination</h1>
 
-    </div>
 
-    <div class="page2 w-full px-[10vh] py-[3vw] bg-white flex flex-col items-center justify-center">
+        <div class="page2 relative z-10 w-full px-[10vh] py-[3vw] bg-transparent flex flex-col items-center justify-center">
 
-        <h1 class="font-bold md:text-3xl text-[5vw] mx-4 mt-[2vh] text-black cursor-pointer">Generate Your Plan</h1>
-        <form class="inputs w-[80vw] h-[50vh] border border-[3px] border-green-200 hover:border-green-300 px-[3vh] py-[3vw] my-[5vh] flex flex-col items-center justify-center">
-            <input id="city" type="text" class="w-[60vw] px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5" placeholder="Enter City Name">
-            <input id="days" type="text" class="w-[60vw] px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5" placeholder="Number Of Days">
-            <input id="budget" type="text" class="w-[60vw] px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5" placeholder="budget">
-            <button id="generatePlan" class="bg-green-500 hover:bg-green-600 cursor-pointer px-[1vh] py-[1vw] text-white font-semibold my-2 mx-3 w-[60vw]">Get The Plan</button>
-        </form>
-        <div id="box" class="border border-gray-400 px-[3vw] py-[4vh] w-[80vw] mb-[4vh]">
-            <p id="generator" class="text-gray-600 font-semibold"></p>
+            <h1 id="typingText" class="font-bold md:text-3xl text-[5vw] mx-4 mt-[2vh] text-white cursor-pointer text-shadow-lg"></h1>
+            <form class="inputs w-[70vw] rounded-lg h-[50vh] bg-white shadow-md px-[3vh] py-[3vw] my-[5vh] flex flex-col items-center justify-center">
+                <input id="city" type="text" class="w-[60vw] rounded-md px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5"
+                    placeholder="Enter City Name">
+                <input id="days" type="text" class="w-[60vw] rounded-md px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5"
+                    placeholder="Number Of Days">
+                <input id="budget" type="text" class="w-[60vw] rounded-md px-[2vh] py-[1vw] border border-gray-300 hover:border-gray-400 cursor-pointer mx-3 my-2.5"
+                    placeholder="Budget">
+                <button id="generatePlan" class="bg-white rounded-md border border-gray-400 hover:bg-black hover:text-white cursor-pointer px-[1vh] py-[1vw] text-black font-semibold my-2 mx-3 w-[60vw]" style="transition: all ease-in 0.4s;">Get The Plan</button>
+            </form>
+            <div id="box" class="rounded-lg border border-gray-400 shadow-md bg-white px-[3vw] py-[4vh] w-[70vw] mb-[4vh]">
+                <p id="generator" class="text-gray-600 font-semibold"></p>
+            </div>
         </div>
     </div>
 
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
 </body>
+
 </html>
